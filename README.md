@@ -1,5 +1,5 @@
 # Overview
-This script automatically compiles a playlist out of youtube subscription notifications received inside a gmail label
+This is a quickly hacked Google Script that automatically compiles a playlist out of youtube subscription notifications received inside a gmail label (useful to split subscriptions into groups using gmail filters)
 
 # Features
 1. Updates playlist every hour
@@ -39,3 +39,7 @@ For both, Google Document and Google Sheet, in the `Script Editor`
 1. In menu: `Resources` / `Current project triggers`
 2. `getGmail` or `putYoutube` -> `Time driven` -> `Hour timer` -> `Every hour`
 3. `Save`
+
+# Troubleshoot / Known issues
+
+1. If an update is unsuccessful, `true` value in the `A1` cell in the `Google Sheet` must be set manually to `false`
