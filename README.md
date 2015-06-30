@@ -1,9 +1,9 @@
 # Overview
 This is a quickly hacked Google Script that automatically compiles a playlist out of youtube subscription notifications received inside a gmail label (useful to split subscriptions into groups using gmail filters).
 
-# Extra Optional Features
-1. Updates playlist every hour
-2. Ability to add different subscriptions (e.g. videos of music, videos from a particular users) to different playlists
+# Features
+1. Updates playlist every hour *(optional)*
+2. Ability to add different subscriptions (e.g. videos of music, videos from a particular users) to different playlists *(optional)*
 
 # Instructions
 ### Step 1
