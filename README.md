@@ -39,7 +39,3 @@ For both, Google Document and Google Sheet, in the `Script Editor`
 1. In menu: `Resources` / `Current project triggers`
 2. `getGmail` or `putYoutube` -> `Time driven` -> `Hour timer` -> `Every hour`
 3. `Save`
-
-# Troubleshoot / Known issues
-
-1. If an update is unsuccessful, `true` value in the `A1` cell in the `Google Sheet` must be set manually to `false`
