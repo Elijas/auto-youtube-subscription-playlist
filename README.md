@@ -13,7 +13,7 @@ This is an early release of a Google Script that automatically compiles a playli
 3. Create a filter inside gmail that adds the label to the youtube notifications (from `noreply@youtube.com` by default)
 
 ### Step 2
-1. Copy both documents from [here](https://drive.google.com/folderview?id=0B0dFuu2c2rmlfmtObzlZUmZaZ1hIMVQ4OXVucXNmYmpVVWJMNTM1OW83TzdrU2RrbWtWNUk&usp=sharing)
+1. Copy both files to your drive: [Document](https://docs.google.com/document/d/12O-p7f6b1lyRlsSKMVEo69wztinsrPBG_s3TRt9rs2Q/copy) and [Sheet](https://docs.google.com/spreadsheets/d/15kvJ-7ERa3iEc5XbYyZ2F6EeOO_i5kduxhHCIBrYSB8/copy)
 
 OR
 
