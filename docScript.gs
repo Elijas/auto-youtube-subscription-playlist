@@ -1,24 +1,24 @@
 function getGmail() {
   var scriptName         = "getGmail";
   // VARIABLES START //
-  var sheetId            = "1WmiJC6Z74XaLChQs-UQYAFIQO5d3d4hcGiNkulJAY14";
-  var docId              = "1Sg7UsPqknxXtAxBjEjFOTFa2KZr4i0PP3Ves5awE7-Y";
-  var label              = "youtube";
-  var playlistId         = "PQ1YG9ktx9sVdz4fgSnff5mSmqIR669Ox6";
+  var sheetId            = "1nB4aik2C4eaXkqtn2HJxndfVDAiXtn0zhh_NCz5K-i0";
+  var docId              = "1HrO3EkDIeNh64nEQtN7A8IoBNLTBPlHDrKDgsduP0ZY";
+  var label              = "hangingaround-youtube";
+  var playlistId         = "PL1YG9ktx9sVdwWMZzEY7MtcNzomEjbljI";
   
   var videoIdTxtStart    = "watch%3Fv%3D"; //exclusive search string, lower boundary
   var videoIdTxtEnd      = "%26"; //exclusive search string, upper boundary
   var videoTitleTxtStart = '%3Dem-uploademail" style="text-decoration:none;color:#468aca" target="_blank">'; //exclusive search string, lower boundary
   var videoTitleTxtEnd   = "</a>"; //exclusive search string, upper boundary
+  var videoIgnoreWthTxt1 = "font-family:arial,Arial,sans-serif;font-size:20px;line-height:25px;letter-spacing:0px;font-weight:bold;color:#222222"; //messages with this text will be ignored
+  var videoIgnoreWthTxt2 = 'is live streaming'; //messages with this text will be ignored
   
-  var gmailApiQuota      = 150;
+  var gmailApiQuota      = 150; //very rough estimate of quota limits, exists only so that there is always a watchdog for "too much"
   var youtubeApiQuota    = 100;
   // VARIABLES END //
-  
+ 
   var sheet = SpreadsheetApp.openById(sheetId).getSheets()[0];
   var doc = DocumentApp.getActiveDocument().getBody().editAsText();
-  
-  Logger.log("[" + scriptName + "] activated"); doc.appendText(Logger.getLog()); Logger.clear();
   
   if (sheet.getRange('A1').getValue() == true) { // Prevents concurrent access (collisions) to shared resources
     Utilities.sleep(30000);
@@ -28,7 +28,13 @@ function getGmail() {
   if (sheet.getRange('A1').getValue() == false) {
     sheet.getRange('A1').setValue(true);
     
-    var threads = GmailApp.search("label:" + label + " is:unread");
+    try {
+      var threads = GmailApp.search("label:" + label + " is:unread");
+    } catch (e) {
+      Logger.log("[" + scriptName + "] ERROR: " + e.message); doc.appendText(Logger.getLog()); Logger.clear();
+      sheet.getRange('A1').setValue(false);
+      return;
+    }
     var startRow = sheet.getLastRow() + 1;
     var row = startRow;
     var usedQuota = 0;
@@ -41,6 +47,8 @@ function getGmail() {
       for (var m = 0; m < messages.length && usedQuota < gmailApiQuota; m++, usedQuota++) {
         if (messages[m].isUnread()) {
           var body = messages[m].getBody();
+          if (body.search(videoIgnoreWthTxt1) != -1 || body.search(videoIgnoreWthTxt2) != -1) continue;
+          
           var msg = body;
           var index = msg.search(videoIdTxtStart);
           msg = msg.substring(index + videoIdTxtStart.length);
@@ -70,18 +78,16 @@ function getGmail() {
         Logger.log("[" + scriptName + "] NOTICE: startRow = " + startRow); doc.appendText(Logger.getLog()); Logger.clear();
       }
     }
-    else Logger.log("[" + scriptName + "] Acquired no items"); doc.appendText(Logger.getLog()); Logger.clear();
+    else {Logger.log("[" + scriptName + "] Acquired no items"); doc.appendText(Logger.getLog()); Logger.clear();}
     
     sheet.getRange('A1').setValue(false);
   }
   else {
+    sheet.getRange('A1').setValue(false);
     Logger.log("[" + scriptName + "] ERROR: Failed to acquire exclusive access"); doc.appendText(Logger.getLog()); Logger.clear();
   }
-  
-  Logger.log("[" + scriptName + "] ended successfully"); doc.appendText(Logger.getLog()); Logger.clear();
 }
 
 function onOpen() {
-  DocumentApp.getUi().createMenu('Functions').addItem('getGmail', 'getGmail').addToUi();
+  DocumentApp.getUi().createMenu('Functions').addItem('getGmail', 'getGmail').addItem('manuallyClearAllPlaylist', 'manuallyClearAllPlaylist').addToUi();
 }
-
