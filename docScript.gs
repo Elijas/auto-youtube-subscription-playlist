@@ -13,7 +13,7 @@ function getGmail() {
   var videoIgnoreWthTxt1 = "font-family:arial,Arial,sans-serif;font-size:20px;line-height:25px;letter-spacing:0px;font-weight:bold;color:#222222"; //messages with this text will be ignored
   var videoIgnoreWthTxt2 = 'is live streaming'; //messages with this text will be ignored
   
-  var gmailApiQuota      = 150; //very rough estimate of quota limits, exists only so that there is always a watchdog for "too much"
+  var gmailApiQuota      = 150;
   var youtubeApiQuota    = 100;
   // VARIABLES END //
  
