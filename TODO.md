@@ -1,4 +1,6 @@
 # TODO
 
-1. Auto-Delete the oldest video in the playlist when "limit is reached" exception is caught (didn't see the need yet)
-2. Improve code: make set up process quick and easy (release as an app?) (Google fixing [this Script bug](https://code.google.com/p/google-apps-script-issues/issues/detail?id=5188) would help a lot, even better [this bug](https://code.google.com/p/gdata-issues/issues/detail?id=3946) which would eliminate the need for gmail entirely)
+1. Implement improvements when/if the bugs are fixed
+- [gdata-issues 3946](https://code.google.com/p/google-apps-script-issues/issues/detail?id=5188)
+- [google-apps-script-issues 5188](https://code.google.com/p/google-apps-script-issues/issues/detail?id=5188)
+2. Auto-remove the oldest video if an exception of an exceeded playlist size limit is caught
