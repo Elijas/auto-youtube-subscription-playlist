@@ -1,10 +1,10 @@
 function getGmail() {
   var scriptName         = "getGmail";
   // VARIABLES START //
-  var sheetId            = "1nB4aik2C4eaXkqtn2HJxndfVDAiXtn0zhh_NCz5K-i0";
-  var docId              = "1HrO3EkDIeNh64nEQtN7A8IoBNLTBPlHDrKDgsduP0ZY";
-  var label              = "hangingaround-youtube";
-  var playlistId         = "PL1YG9ktx9sVdwWMZzEY7MtcNzomEjbljI";
+  var sheetId            = "2nB4aik2C4eaXkqtn2HJxndfVDAiXtn0zhh_NCz5K-i0";
+  var docId              = "2HrO3EkDIeNh64nEQtN7A8IoBNLTBPlHDrKDgsduP0ZY";
+  var label              = "youtube";
+  var playlistId         = "1L1YG9ktx9sVdwWMZzEY7MtcNzomEjbljI";
   
   var videoIdTxtStart    = "watch%3Fv%3D"; //exclusive search string, lower boundary
   var videoIdTxtEnd      = "%26"; //exclusive search string, upper boundary
