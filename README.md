@@ -40,7 +40,7 @@ For both, Google Document and Google Sheet, in the `Script Editor`
 2. `getGmail` or `putYoutube` -> `Time driven` -> `Hour timer` -> `Every hour`
 3. `Save`
 
-# Extra
+##### (Extra) Quickly delete all items:
 
 To quickly remove all playlist items, bookmark an item with a link below and click on it while having the youtube playlist page open.
 
