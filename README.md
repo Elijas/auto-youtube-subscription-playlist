@@ -39,3 +39,9 @@ For both, Google Document and Google Sheet, in the `Script Editor`
 1. In menu: `Resources` / `Current project triggers`
 2. `getGmail` or `putYoutube` -> `Time driven` -> `Hour timer` -> `Every hour`
 3. `Save`
+
+# Extra
+
+To quickly remove all playlist items, bookmark an item with a link below and click on it while having the youtube playlist page open.
+
+`javascript:(function() { if (confirm('Remove all?')) {var i = window.setInterval(function() {var closeButton = document.querySelector('.pl-video-edit-remove');    if (closeButton) {      closeButton.click();    } else {      window.clearInterval(i);    }}, 500);}})();` ([source](https://gist.github.com/timothyarmstrong/10501804))
