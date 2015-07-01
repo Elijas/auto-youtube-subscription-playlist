@@ -89,5 +89,5 @@ function getGmail() {
 }
 
 function onOpen() {
-  DocumentApp.getUi().createMenu('Functions').addItem('getGmail', 'getGmail').addItem('manuallyClearAllPlaylist', 'manuallyClearAllPlaylist').addToUi();
+  DocumentApp.getUi().createMenu('Functions').addItem('getGmail', 'getGmail').addToUi();
 }
