@@ -9,7 +9,7 @@ This is a Google Apps Script that automatically adds new Youtube videos to a pla
 # Set-up Instructions
 ### Step 1
 
-1. Opt to receive youtube subscription notifications to email
+1. Opt to receive youtube subscription notifications ("Send updates") to email
 2. Create a label in gmail (used exclusively for the youtube notifications, any name is fine, e.g. `youtube`)
 3. Create a filter in gmail that adds a label to the youtube notifications (e.g. all emails `noreply@youtube.com` with a word `uploaded` in the title)
 
