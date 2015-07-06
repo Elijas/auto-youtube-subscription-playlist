@@ -1,5 +1,5 @@
 # Description
-This is a Google Apps Script that automatically adds new Youtube videos to a playlist. This is done through scraping the Youtube subscription notifications in a gmail label. (a workaround for the current lack of support for the main feature in both Youtube UI and API).
+This is a Google Apps Script that automatically adds new Youtube videos to a playlist (a replacement for Youtube Collections feature). This is done through scraping the Youtube subscription notifications in a gmail label. (a workaround for the current lack of support for the main feature in both Youtube UI and API).
 
 # Features
 1. Adds all new subscription videos to a Youtube playlist.
