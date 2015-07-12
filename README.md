@@ -11,7 +11,7 @@ This is a Google Apps Script that automatically adds new Youtube videos to a pla
 
 1. Opt to receive youtube subscription notifications ("Send updates") to email
 2. Create a label in gmail (used exclusively for the youtube notifications, any name is fine, e.g. `youtube`)
-3. Create a filter in gmail that adds a label to the youtube notifications (e.g. all emails `noreply@youtube.com` with a word `uploaded` in the title)
+3. Create a filter in gmail that adds a label (and perhaps preferably also skips inbox) to the youtube notifications (e.g. all emails `noreply@youtube.com` with a word `uploaded` in the title)
 
 ### Step 2
 1. Copy both files to your drive: [Document](https://docs.google.com/document/d/12O-p7f6b1lyRlsSKMVEo69wztinsrPBG_s3TRt9rs2Q/copy) and [Sheet](https://docs.google.com/spreadsheets/d/15kvJ-7ERa3iEc5XbYyZ2F6EeOO_i5kduxhHCIBrYSB8/copy)
@@ -21,7 +21,7 @@ This is a Google Apps Script that automatically adds new Youtube videos to a pla
   - `var label` (text after `label:` in gmail search bar when the label is selected)
   - `var playlistId` (string in the URL of the Youtube Playlist after `?list=`)
 3. Open the Sheet, then in menu: `Resources` / `Advanced Google Services` / `Google Developers Console` / `Youtube API` / `Enable API`
-4. Open the Document and run `Functions` / `getGmail` once and open the Socument and run `Functions` / `putYoutube` once to authorize access for the app.
+4. Open the Document and run `Functions` / `getGmail` once and open the Document and run `Functions` / `putYoutube` once to authorize access for the app.
 
 ### Step 2 (Alternative)
 
