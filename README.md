@@ -1,4 +1,4 @@
-# NOTICE: An updated version 2 is [released](https://github.com/Elijas/auto-youtube-subscription-playlist-2)!
+# An updated version 2 is [released](https://github.com/Elijas/auto-youtube-subscription-playlist-2)!
 Setup and usage is simplified (now it is one script, doesn't use gmail anymore).
 
 ---
@@ -25,7 +25,7 @@ This is a Google Apps Script that automatically adds new Youtube videos to a pla
   - `var docId` (string in the URL of the Document between `/d/` and `/edit`)
   - `var label` (text after `label:` in gmail search bar when the label is selected)
   - `var playlistId` (string in the URL of the Youtube Playlist after `?list=`)
-3. Open the Sheet, then in menu: `Resources` / `Advanced Google Services` / `Google Developers Console` / `Youtube API` / `Enable API`
+3. Open the Script Editor of the sheet, then in menu: `Resources` / `Advanced Google Services` / `Google Developers Console` / `Youtube API` / `Enable API`
 4. Open the Document and run `Functions` / `getGmail` once and open the Document and run `Functions` / `putYoutube` once to authorize access for the app.
 
 ### Step 2 (Alternative)
