@@ -1,3 +1,8 @@
+# NOTICE: An updated version 2 is [released](https://github.com/Elijas/auto-youtube-subscription-playlist-2)!
+Setup and usage is simplified (now it is one script, doesn't use gmail anymore).
+
+---
+
 # Description
 This is a Google Apps Script that automatically adds new Youtube videos to a playlist (a replacement for Youtube Collections feature). This is done through scraping the Youtube subscription notifications in a gmail label. (a workaround for the current lack of support for the main feature in both Youtube UI and API).
 
