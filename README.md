@@ -65,3 +65,7 @@ For both Google Document and Google Sheet in their `Script Editor`s:
 To remove all playlist items, bookmark the link below and click on it while having the youtube playlist page open.
 
 `javascript:(function() { if (confirm('Remove all?')) {var i = window.setInterval(function() {var closeButton = document.querySelector('.pl-video-edit-remove');    if (closeButton) {      closeButton.click();    } else {      window.clearInterval(i);    }}, 500);}})();` ([source](https://gist.github.com/timothyarmstrong/10501804))
+
+# Feedback
+
+[Official Reddit Thread](https://www.reddit.com/r/youtube/comments/3br98c/a_way_to_automatically_add_subscriptions_to/)
