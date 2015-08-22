@@ -63,6 +63,7 @@ function putYoutube() {
       }
             
       sheet.deleteRow(2);
+      sheet.appendRow(['']);
     }
     
     if (items != 0) {Logger.log("[" + scriptName + "] Inserted items: " + (usedQuota<youtubeApiQuota ? items : usedQuota)); doc.appendText(Logger.getLog()); Logger.clear();}
