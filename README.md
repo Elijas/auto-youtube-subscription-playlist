@@ -19,7 +19,7 @@ This is a Google Apps Script that automatically adds new Youtube videos to a pla
 3. Create a filter in gmail that adds a label (and perhaps preferably also skips inbox) to the youtube notifications (e.g. all emails `noreply@youtube.com` with a word `uploaded` in the title)
 
 ### Step 2
-1. Copy both files to your drive: [Document](https://goo.gl/9CN1Qo) and [Sheet](https://goo.gl/ly9JvJ)
+1. Copy both files to your drive: [Document](http://bit.ly/subscriptionPlaylistGetGmail) and [Sheet](http://bit.ly/subscriptionPlaylistPutYoutube)
 2. Open the Script Editors (in menu: `Tools` / `Script Editor...`) of both Sheet and Document and change the following variables: 
   - `var sheetId` (string in the URL of the Sheet between `/d/` and `/edit`)
   - `var docId` (string in the URL of the Document between `/d/` and `/edit`)
